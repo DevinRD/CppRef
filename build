@@ -1,1 +1,4 @@
-g++ $1 -o bin/${1%.*}.out
+FILE=$1
+FILE=${FILE%.*}
+FILE=${FILE##*/}
+g++ src/${FILE}.cpp -o bin/${FILE}.out
